@@ -20,22 +20,34 @@
 <body>
     <div class="navbar">
         <div class="navbar-left"><img id="home" src="/images/FreshBiteBEM2.png"></div>
-        <div class="navbar-center">
+        <div class="navbar-center"><input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg"
+                    height="44px" viewBox="0 -960 960 960" width="44px" fill="#3b3129">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg></label>
+            <label for="sidebar-active" id="overlay"></label>
             <div class="container">
+                <label for="sidebar-active" class="close-sidebar-button"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="44px" viewBox="0 -960 960 960" width="44px" fill="#3b3129">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </label>
                 <a href="#">PRODUTOS</a>
                 <a href="#">SOBRE NÓS</a>
                 <a href="#">CLIENTES</a>
                 <a href="#" id="btn">CONTATE-NOS</a>
             </div>
         </div>
-        <div class="navbar-right">
-            <a href="https://www.instagram.com/freshbite_ofc/"><img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjNJREFUSEvF1UnITWEYB/DfhyLCRlamQiEJkSQskFJfMmS2sTEsFBmKLJTIELKyYCF9hoxRSuykJJIyJpKyYUVW5vfRe+t0Oqd7U7fvrds95x2e///5/5/nPR3aPDraHF+3AYzEVszEeGqJ/MEz3MNxvCkrUpXBBpxAL3zAA7yqkXIyJmIofmATThX3lgGm5IAvsAhvW/QosryBYZiKJ41zZYCrWIAxeN9C8LVJvr34krJdh0cpo+tYUgcQQYN9gBRHD8zDOPzCS9zNc7ezlMMzwCCMqAP4ii5sLEQPfS9iegk0jD2ddP+EwTiDUGA++tUB/MYR7Mgbgvn9zGgb7qBnZn4oV80sRDXFCCJL855/E2UPYuMB7MoHluVD8X+plMHy5NWFZOjCbHAsn0/yxXwQqwUIZjvzejxvR398KwGE1p9TOe9LvuzJayHvqiLxqgyiYbbkAwezXANT44U/xdEA2J96YHdeOIs1zQCO5S6OM1Ful7OuV0oAwTQYFyWK9xXNPChm0DA5SjCkCpOjw+emSjmM15hdMjkA+9R5EDoHi/UFtkOymTMqynQlPhbmo0znICStNDkuq/hVNVow60wV9h23cLPAvBHvMQYkkqPrAIL94lSaY1u8KopJTUj311OcSyRX1wFMSiyDRWwMg9+VZKl7jeDXEF5NyzEqJYrJxnUdBj/MksT8TzxPjdgbo7LZMd8XcQvH+macLLKo+6L9zwfnaNX13m2fzBalb76t7Rn8BcJ+cxlsKeBhAAAAAElFTkSuQmCC" /></a>
-            <a href="https://www.facebook.com"><img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAO1JREFUSEvt1T9OAkEYhvEfnQ2egNJQUVFYEiiUC3ADKY1WXoATaKjlDrZooq0JlVaGxIrEC5BQ+i+DbFYghJklFm41yWaeZ7/325mvpOCnVDDfzgX3aEZW9YDWnJGv4D0S/osbI/j6mFdMArWOclj/cLcVPKGDcabiRxymEExRxVsuzmSCWxwHeAO91BENcBKglzhf8mNE9SAr6OM0leACo5D9S4AeoBLWN9iPaXIbwxXnZA+zzLutIlonqOE5VjDfX1gP/gXfCWxym/7tHmwycK4/r+hu6PgVznJn4w5HqwZOonmzwOx8Jiev4ANsbjkZwHaFhAAAAABJRU5ErkJggg==" /></a>
-            <a href="https://www.whatsapp.com"><img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAi9JREFUSEvN1UnITnEUBvDfx8JMdoREiChThg1JmVI2hqIUiTInZcGGYiE2xpQSxUKxUJJZSCFiY0ghsjKkKGS+R+f7ent77/vafPWd1e3e8z/P/zznOc9t0srR1Mr1tQmAsViAyRiCX7iFO7iAB/VYqNdBPxzGDHzOQk/wDaMxEj2wG1vwvRZQGUDc9Bo6YAOO40+NAmsT4AXm4VF1Ti2AXriXVEzF8wZCGFF0dAbtMBxfKvNrAZzDeIzDy4KmPuiGp3WAAuQ+jmBlPYBJuIFlmTwsu3mHASU0NdfbjB2YjkvNL6s72Iel6FkM7kfR7ibszOQY9sU6XXRKMQRdc8sAHuI15mTCKhzI5wA+2mAecT5iVBnAm4L/mMGKTOidc/iIkO3PBgCHsAjdywCe5bAWVhQKKe7FQaxpMIegcz06lgGcT/4nVN30ZG5z8BuAnZOuUM2pomh0GBF5YzC4DGB7DrYv3laAtC+A92A1PvHPw0K6EbvyTOzBe5zG8jKAgblY24qErTX4npZ0Dc1vvzEzZRncn0hraVFbrUULJYShhcmVRdAQg3yVIuiPuwivmlJ5qBqgS/IZ+7CxgWKaP0fxywkY2x8yb4lqgNk4W9C0GNF+bOXtYouP4WsVYMxpCdalssK3Gprd/hxkc604MCit+HrSEa4aXjUxk27m9tc0xeoOwkMi8SquFJL8UNhx1+Jm84sfzCyEfMNGHqdnhUSD+9JoE7/M/5x17bRW7+Av0jpxGTt6Zt0AAAAASUVORK5CYII=" /></a>
-        </div>
+
+    </div>
+    <div class="navbar-right">
+        <a href="https://www.instagram.com/freshbite_ofc/"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjNJREFUSEvF1UnITWEYB/DfhyLCRlamQiEJkSQskFJfMmS2sTEsFBmKLJTIELKyYCF9hoxRSuykJJIyJpKyYUVW5vfRe+t0Oqd7U7fvrds95x2e///5/5/nPR3aPDraHF+3AYzEVszEeGqJ/MEz3MNxvCkrUpXBBpxAL3zAA7yqkXIyJmIofmATThX3lgGm5IAvsAhvW/QosryBYZiKJ41zZYCrWIAxeN9C8LVJvr34krJdh0cpo+tYUgcQQYN9gBRHD8zDOPzCS9zNc7ezlMMzwCCMqAP4ii5sLEQPfS9iegk0jD2ddP+EwTiDUGA++tUB/MYR7Mgbgvn9zGgb7qBnZn4oV80sRDXFCCJL855/E2UPYuMB7MoHluVD8X+plMHy5NWFZOjCbHAsn0/yxXwQqwUIZjvzejxvR398KwGE1p9TOe9LvuzJayHvqiLxqgyiYbbkAwezXANT44U/xdEA2J96YHdeOIs1zQCO5S6OM1Ful7OuV0oAwTQYFyWK9xXNPChm0DA5SjCkCpOjw+emSjmM15hdMjkA+9R5EDoHi/UFtkOymTMqynQlPhbmo0znICStNDkuq/hVNVow60wV9h23cLPAvBHvMQYkkqPrAIL94lSaY1u8KopJTUj311OcSyRX1wFMSiyDRWwMg9+VZKl7jeDXEF5NyzEqJYrJxnUdBj/MksT8TzxPjdgbo7LZMd8XcQvH+macLLKo+6L9zwfnaNX13m2fzBalb76t7Rn8BcJ+cxlsKeBhAAAAAElFTkSuQmCC" /></a>
+        <a href="https://www.facebook.com"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAO1JREFUSEvt1T9OAkEYhvEfnQ2egNJQUVFYEiiUC3ADKY1WXoATaKjlDrZooq0JlVaGxIrEC5BQ+i+DbFYghJklFm41yWaeZ7/325mvpOCnVDDfzgX3aEZW9YDWnJGv4D0S/osbI/j6mFdMArWOclj/cLcVPKGDcabiRxymEExRxVsuzmSCWxwHeAO91BENcBKglzhf8mNE9SAr6OM0leACo5D9S4AeoBLWN9iPaXIbwxXnZA+zzLutIlonqOE5VjDfX1gP/gXfCWxym/7tHmwycK4/r+hu6PgVznJn4w5HqwZOonmzwOx8Jiev4ANsbjkZwHaFhAAAAABJRU5ErkJggg==" /></a>
+        <a href="https://www.whatsapp.com"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAi9JREFUSEvN1UnITnEUBvDfx8JMdoREiChThg1JmVI2hqIUiTInZcGGYiE2xpQSxUKxUJJZSCFiY0ghsjKkKGS+R+f7ent77/vafPWd1e3e8z/P/zznOc9t0srR1Mr1tQmAsViAyRiCX7iFO7iAB/VYqNdBPxzGDHzOQk/wDaMxEj2wG1vwvRZQGUDc9Bo6YAOO40+NAmsT4AXm4VF1Ti2AXriXVEzF8wZCGFF0dAbtMBxfKvNrAZzDeIzDy4KmPuiGp3WAAuQ+jmBlPYBJuIFlmTwsu3mHASU0NdfbjB2YjkvNL6s72Iel6FkM7kfR7ibszOQY9sU6XXRKMQRdc8sAHuI15mTCKhzI5wA+2mAecT5iVBnAm4L/mMGKTOidc/iIkO3PBgCHsAjdywCe5bAWVhQKKe7FQaxpMIegcz06lgGcT/4nVN30ZG5z8BuAnZOuUM2pomh0GBF5YzC4DGB7DrYv3laAtC+A92A1PvHPw0K6EbvyTOzBe5zG8jKAgblY24qErTX4npZ0Dc1vvzEzZRncn0hraVFbrUULJYShhcmVRdAQg3yVIuiPuwivmlJ5qBqgS/IZ+7CxgWKaP0fxywkY2x8yb4lqgNk4W9C0GNF+bOXtYouP4WsVYMxpCdalssK3Gprd/hxkc604MCit+HrSEa4aXjUxk27m9tc0xeoOwkMi8SquFJL8UNhx1+Jm84sfzCyEfMNGHqdnhUSD+9JoE7/M/5x17bRW7+Av0jpxGTt6Zt0AAAAASUVORK5CYII=" /></a>
     </div>
     <div id="photo_container">
         <div class="photo1">
@@ -92,8 +104,10 @@
             <h3>SOBRE NÓS</h3><br><br>
             <h2>FRESHBITE</h2><br><br><br>
             <p>Somos uma empresa especializada em alimentos fit, comprometida em oferecer produtos saudáveis e
-                nutritivos que ajudam nossos clientes a manter um estilo de vida equilibrado. Com foco em ingredientes
-                naturais e de alta qualidade, desenvolvemos opções que aliam sabor e bem-estar, ideais para quem busca
+                nutritivos que ajudam nossos clientes a manter um estilo de vida equilibrado. Com foco em
+                ingredientes
+                naturais e de alta qualidade, desenvolvemos opções que aliam sabor e bem-estar, ideais para quem
+                busca
                 uma alimentação saudável sem abrir mão do prazer em comer.</p>
             <button class="saibamais">Saiba mais</button>
         </div>
@@ -111,6 +125,14 @@
         <button class="galeriabtn">Ver mais</button>
     </div>
     <div class="testemunhas">
+        <a href="https://www.instagram.com/freshbite_ofc/"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjNJREFUSEvF1UnITWEYB/DfhyLCRlamQiEJkSQskFJfMmS2sTEsFBmKLJTIELKyYCF9hoxRSuykJJIyJpKyYUVW5vfRe+t0Oqd7U7fvrds95x2e///5/5/nPR3aPDraHF+3AYzEVszEeGqJ/MEz3MNxvCkrUpXBBpxAL3zAA7yqkXIyJmIofmATThX3lgGm5IAvsAhvW/QosryBYZiKJ41zZYCrWIAxeN9C8LVJvr34krJdh0cpo+tYUgcQQYN9gBRHD8zDOPzCS9zNc7ezlMMzwCCMqAP4ii5sLEQPfS9iegk0jD2ddP+EwTiDUGA++tUB/MYR7Mgbgvn9zGgb7qBnZn4oV80sRDXFCCJL855/E2UPYuMB7MoHluVD8X+plMHy5NWFZOjCbHAsn0/yxXwQqwUIZjvzejxvR398KwGE1p9TOe9LvuzJayHvqiLxqgyiYbbkAwezXANT44U/xdEA2J96YHdeOIs1zQCO5S6OM1Ful7OuV0oAwTQYFyWK9xXNPChm0DA5SjCkCpOjw+emSjmM15hdMjkA+9R5EDoHi/UFtkOymTMqynQlPhbmo0znICStNDkuq/hVNVow60wV9h23cLPAvBHvMQYkkqPrAIL94lSaY1u8KopJTUj311OcSyRX1wFMSiyDRWwMg9+VZKl7jeDXEF5NyzEqJYrJxnUdBj/MksT8TzxPjdgbo7LZMd8XcQvH+macLLKo+6L9zwfnaNX13m2fzBalb76t7Rn8BcJ+cxlsKeBhAAAAAElFTkSuQmCC" /></a>
+
+        <a href="https://www.facebook.com"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAO1JREFUSEvt1T9OAkEYhvEfnQ2egNJQUVFYEiiUC3ADKY1WXoATaKjlDrZooq0JlVaGxIrEC5BQ+i+DbFYghJklFm41yWaeZ7/325mvpOCnVDDfzgX3aEZW9YDWnJGv4D0S/osbI/j6mFdMArWOclj/cLcVPKGDcabiRxymEExRxVsuzmSCWxwHeAO91BENcBKglzhf8mNE9SAr6OM0leACo5D9S4AeoBLWN9iPaXIbwxXnZA+zzLutIlonqOE5VjDfX1gP/gXfCWxym/7tHmwycK4/r+hu6PgVznJn4w5HqwZOonmzwOx8Jiev4ANsbjkZwHaFhAAAAABJRU5ErkJggg==" /></a>
+
+        <a href="https://www.whatsapp.com"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAi9JREFUSEvN1UnITnEUBvDfx8JMdoREiChThg1JmVI2hqIUiTInZcGGYiE2xpQSxUKxUJJZSCFiY0ghsjKkKGS+R+f7ent77/vafPWd1e3e8z/P/zznOc9t0srR1Mr1tQmAsViAyRiCX7iFO7iAB/VYqNdBPxzGDHzOQk/wDaMxEj2wG1vwvRZQGUDc9Bo6YAOO40+NAmsT4AXm4VF1Ti2AXriXVEzF8wZCGFF0dAbtMBxfKvNrAZzDeIzDy4KmPuiGp3WAAuQ+jmBlPYBJuIFlmTwsu3mHASU0NdfbjB2YjkvNL6s72Iel6FkM7kfR7ibszOQY9sU6XXRKMQRdc8sAHuI15mTCKhzI5wA+2mAecT5iVBnAm4L/mMGKTOidc/iIkO3PBgCHsAjdywCe5bAWVhQKKe7FQaxpMIegcz06lgGcT/4nVN30ZG5z8BuAnZOuUM2pomh0GBF5YzC4DGB7DrYv3laAtC+A92A1PvHPw0K6EbvyTOzBe5zG8jKAgblY24qErTX4npZ0Dc1vvzEzZRncn0hraVFbrUULJYShhcmVRdAQg3yVIuiPuwivmlJ5qBqgS/IZ+7CxgWKaP0fxywkY2x8yb4lqgNk4W9C0GNF+bOXtYouP4WsVYMxpCdalssK3Gprd/hxkc604MCit+HrSEa4aXjUxk27m9tc0xeoOwkMi8SquFJL8UNhx1+Jm84sfzCyEfMNGHqdnhUSD+9JoE7/M/5x17bRW7+Av0jpxGTt6Zt0AAAAASUVORK5CYII=" /></a>
     </div>
 
 

@@ -425,6 +425,197 @@ body {
 
 .testemunhas {
     width: 100%;
-    height: 1000px;
+    height: 200px;
+    background-color: var(--alternative-acc);
     border: solid 3px purple;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.testemunhas a {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    color: #fff;
+}
+
+
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+    display: none;
+}
+
+@media screen and (max-width:700px) {
+    .navbar {
+        overflow: hidden;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 999;
+        width: 300px;
+        height: 100%;
+
+        background-color: var(--bg-color);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.50s ease-out;
+    }
+
+    #btn {
+        border: none;
+        font-weight: 600;
+    }
+
+    .navbar-left img {
+        padding: 0;
+        margin-left: 40px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .container a {
+        display: flex;
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 30px 10px 30px 20px;
+        justify-content: flex-start;
+        font-weight: 600;
+    }
+
+    .container #btn {
+        padding: 30px 10px 30px 20px;
+        font-weight: 800;
+    }
+
+    #sidebar-active:checked~.container {
+        right: 0;
+    }
+
+    #sidebar-active {
+        margin-right: 0px;
+    }
+
+    #sidebar-active:checked~#overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    .open-sidebar-button,
+    .close-sidebar-button {
+        padding: 20px;
+        display: block;
+    }
+
+    .container-sobre {
+        display: none;
+    }
+
+    #galeria-container {
+        display: none;
+    }
+
+    .gridcontainer {
+        display: grid;
+        grid-template-columns: repeat(1, 4fr);
+        gap: 30px;
+        padding: 20px;
+        position: relative;
+        margin-top: 15%;
+    }
+
+    .griditems {
+        display: grid;
+        padding: 1px;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .griditems img {
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
+    }
+
+    .griditems img:hover {
+        cursor: pointer;
+        filter: brightness(50%);
+        transition: all 0.4s;
+    }
+
+    .gridtext {
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.10em;
+        font-weight: 600;
+        color: var(--alternative-tc);
+    }
+
+    .gridbtn {
+        padding: 20px;
+        border: solid 2px var(--alternative-acc);
+        padding: 20px 0px;
+        margin-top: 20px;
+        font-size: 16px;
+        letter-spacing: 0.20em;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--alternative-acc);
+
+    }
+
+    .content {
+        width: 100%;
+        /*border: solid 3px orange;*/
+        background-image: url(/images/walltexture4.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 1500px;
+
+        background-color: var(--bg-color);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.50s ease-out;
+        margin-left: 0px;
+    }
+
+    .h2 {
+        display: flex;
+        flex-direction: column;
+        border: solid 2px purple;
+        font-family: "Raleway", sans-serif;
+        font-size: 22px;
+        /*text-transform: uppercase;*/
+        color: var(--alternative-tc);
+        /*letter-spacing: 0.10em;*/
+
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .navbar-center {
+        margin-right: 0;
+    }
 }
